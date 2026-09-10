@@ -1,9 +1,7 @@
 export const FRAME_COUNT = 169;
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export const framePath = (n: number) =>
-  `${basePath}/frames/frame_${String(n).padStart(4, "0")}.jpg`;
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/frames/frame_${String(n).padStart(4, "0")}.jpg`;
 
 export type Dialogue = {
   id: string;
