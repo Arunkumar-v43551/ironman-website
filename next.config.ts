@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/ironman-website' : '';
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const basePath = isGithubActions ? '/ironman-website' : '';
 
 const nextConfig: NextConfig = {
   /* config options here */
